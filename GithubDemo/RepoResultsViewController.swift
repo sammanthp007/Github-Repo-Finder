@@ -57,7 +57,7 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource, UITabl
         // Define each cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "repoCell", for: indexPath) as! RepoCell
         
-        cell.repoNameLabel.text = "samman"
+        cell.repo = self.repos[indexPath.row]
         
         return cell
         

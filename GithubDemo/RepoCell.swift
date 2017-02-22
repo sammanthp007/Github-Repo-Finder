@@ -13,6 +13,13 @@ class RepoCell: UITableViewCell {
     @IBOutlet weak var repoNameLabel: UILabel!
     @IBOutlet weak var repoAuthorLabel: UILabel!
     
+    var repo: GithubRepo! {
+        didSet {
+            repoNameLabel.text = repo.name
+            repoAuthorLabel.text = repo.ownerHandle
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
