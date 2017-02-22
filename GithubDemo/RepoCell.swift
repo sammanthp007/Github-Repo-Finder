@@ -11,12 +11,28 @@ import UIKit
 class RepoCell: UITableViewCell {
 
     @IBOutlet weak var repoNameLabel: UILabel!
+    @IBOutlet weak var starImageView: UIImageView!
+    @IBOutlet weak var forkImageView: UIImageView!
+    @IBOutlet weak var numOfForksLabel: UILabel!
+    @IBOutlet weak var repoDescription: UILabel!
+    @IBOutlet weak var numOfStarsLabel: UILabel!
     @IBOutlet weak var repoAuthorLabel: UILabel!
+    @IBOutlet weak var userImageView: UIImageView!
     
     var repo: GithubRepo! {
         didSet {
-            repoNameLabel.text = repo.name
-            repoAuthorLabel.text = repo.ownerHandle
+            repoNameLabel.text = repo.name!
+            repoAuthorLabel.text = "by \(repo.ownerHandle!)"
+            numOfForksLabel.text = "\(repo.forks!)"
+            numOfStarsLabel.text = "\(repo.stars!)"
+            repoDescription.text = repo.repoDescription!
+            
+            let userImageURL = URL(string: repo.ownerAvatarURL!)
+            userImageView.setImageWith(userImageURL!)
+            
+            starImageView.image = UIImage(named: "fork")
+            forkImageView.image = UIImage(named: "star")
+            
         }
     }
     
