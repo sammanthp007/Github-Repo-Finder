@@ -53,7 +53,6 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource, UITabl
         
         cell.repoNameLabel.text = "samman"
         
-        print("should be showing samman")
         return cell
         
     }
@@ -75,6 +74,9 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource, UITabl
             
             // add the result from the search to repos
             self.repos = newRepos
+            
+            // update
+            self.tableView.reloadData()
 
             MBProgressHUD.hide(for: self.view, animated: true)
             }, error: { (error) -> Void in
