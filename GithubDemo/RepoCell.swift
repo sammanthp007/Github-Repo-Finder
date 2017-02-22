@@ -39,6 +39,9 @@ class RepoCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        // have rounded corner in image view
+        userImageView.layer.cornerRadius = 3
+        userImageView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
