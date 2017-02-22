@@ -28,6 +28,9 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.dataSource = self
         tableView.delegate = self
         
+        // defer computing the height of each row until the user scrolls the table
+        tableView.estimatedRowHeight = 100
+        
         // automatic height measurement based on content of each cell
         tableView.rowHeight = UITableViewAutomaticDimension
 
