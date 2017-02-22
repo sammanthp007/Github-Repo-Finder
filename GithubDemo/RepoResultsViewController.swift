@@ -27,6 +27,9 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource, UITabl
         searchBar.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
+        
+        // automatic height measurement based on content of each cell
+        tableView.rowHeight = UITableViewAutomaticDimension
 
         // Add SearchBar to the NavigationBar
         searchBar.sizeToFit()
