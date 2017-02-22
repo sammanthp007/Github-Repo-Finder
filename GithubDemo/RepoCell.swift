@@ -30,8 +30,8 @@ class RepoCell: UITableViewCell {
             let userImageURL = URL(string: repo.ownerAvatarURL!)
             userImageView.setImageWith(userImageURL!)
             
-            starImageView.image = UIImage(named: "fork")
-            forkImageView.image = UIImage(named: "star")
+            starImageView.image = UIImage(named: "star")
+            forkImageView.image = UIImage(named: "fork")
             
         }
     }
