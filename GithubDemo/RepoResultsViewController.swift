@@ -43,7 +43,10 @@ class RepoResultsViewController: UIViewController {
             // Print the returned repositories to the output window
             for repo in newRepos {
                 print(repo)
-            }   
+            }
+            
+            // add the result from the search to repos
+            self.repos = newRepos
 
             MBProgressHUD.hide(for: self.view, animated: true)
             }, error: { (error) -> Void in
