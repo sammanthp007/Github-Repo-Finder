@@ -57,10 +57,10 @@ Time spent: 3 hours spent in total
 ## User Stories
 
 The following **required** functionality is completed:
-### - [ ] Milestone 1: Setup
-Open the GithubDemo.xcworkspace from the last GitHub Repo Finder lab.
+### Milestone 1: Setup
+- [ ] Open the GithubDemo.xcworkspace from the last GitHub Repo Finder lab.
 We'll be using the GitHub Search API.
-### - [ ] Milestone 2: Allow Filtering by Number of Stars
+### Milestone 2: Allow Filtering by Number of Stars
 - [ ] Add a settings button to the left of the search bar:
 - [ ] For buttons in the navigation bar, you can use a BarButtonItem in Interface Builder.
 - [ ] Tapping on the settings button should modally present a SearchSettingsViewController:
@@ -83,10 +83,10 @@ You'll need a way to pass the settings information between the RepoResultsViewCo
 
 - [ ] When we segue from the RepoResultsViewController to the SearchSettingsViewController, we'll want to set the RepoResultsViewController as the delegate:
 
-### - [ ] Bonus 1: Allow Filtering by Language
+### Bonus 1: Allow Filtering by Language
 - [ ] The settings view controller should use a table view to display all settings.
 - [ ] There should be a setting for whether to filter by language. This setting is controlled by a toggle switch.
 - [ ] When the language filter toggle is on, a list of languages should appear in the table.
 - [ ] Tapping on a language toggles whether it will be included in the search.
-### - [ ] Bonus 2: Configurable Sort Order
+### Bonus 2: Configurable Sort Order
 - [ ] Add an option to the settings view controller for sorting search results based on either stars, forks, or relevance
