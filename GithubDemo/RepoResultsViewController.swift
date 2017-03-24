@@ -86,7 +86,7 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource, UITabl
 
             MBProgressHUD.hide(for: self.view, animated: true)
             }, error: { (error) -> Void in
-                print(error)
+                print("\(error)")
         })
     }
 }
